@@ -19,8 +19,7 @@ app.set('view engine', 'ejs');
 
 app.get('/products', async (req, res) => { //very common pattern
     const products = await Product.find({})//how we match every product but does take time
-    console.log(products)
-    res.render('products/index') //not need to put .ejs
+    res.render('products/index', { products }) //not need to put .ejs
 })
 
 app.listen(3000, () => {
