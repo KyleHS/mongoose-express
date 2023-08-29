@@ -42,7 +42,7 @@ const seedProducts = [
         category: 'fruit'
     },
     {
-        name: 'Organic Mini Seedless Watermeloon',
+        name: 'Organic Mini Seedless Watermelon',
         price: 3.99,
         category: 'fruit'
     },
