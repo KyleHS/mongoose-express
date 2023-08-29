@@ -54,6 +54,12 @@ app.get('/products/:id', async (req, res) => {
     res.render('products/show',  { product })
 })
 
+app.delete('/products/:id', async (req, res) => {
+    const { id } = req.params;
+    const deletedProduct = await Product.findByIdAndDelete(id)
+    res.redirect('/products');
+})
+
 app.listen(3000, () => {
     console.log ("app is open on port 3000")
 });
